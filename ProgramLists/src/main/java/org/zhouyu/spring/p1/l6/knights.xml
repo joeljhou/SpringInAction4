@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="knight" class="org.zhouyu.spring.p1.l3.BraveKnight">
+        <constructor-arg ref="quest"/>                  <!--注入 Quest bean-->
+    </bean>
+
+    <bean id="quest" class="org.zhouyu.spring.p1.l5.SlayDragonQuest">
+        <constructor-arg value="#{T(System).out}"/>     <!--创建 SlayDragonQuest-->
+    </bean>
+
+</beans>
