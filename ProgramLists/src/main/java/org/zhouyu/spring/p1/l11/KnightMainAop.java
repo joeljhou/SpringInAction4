@@ -16,8 +16,10 @@ public class KnightMainAop {
         //加载Sprinig应用上下文
         String path = new File("ProgramList").getCanonicalPath() + "/src/main/java/com/zhouyu/spring/p1/p1_11/knights.xml";
         FileSystemXmlApplicationContext context = new FileSystemXmlApplicationContext(path);
-        Knight knight = context.getBean(Knight.class);    //获取knight bean
-        knight.embarkOnQuest();                           //使用knight
+        //获取knight bean
+        Knight knight = context.getBean(Knight.class);
+        //使用knight
+        knight.embarkOnQuest();
         context.close();
     }
 }

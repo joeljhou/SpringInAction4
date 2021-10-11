@@ -6,11 +6,14 @@ package org.zhouyu.spring.p1.l2;
  * 程序清单1.2 少女拯救骑士
  */
 public class DamselRescuingKnight implements Knight{
-    //拯救少女任务
+    /**
+     * 拯救少女任务
+     */
     private RescueDamselQuest quest;
 
     public DamselRescuingKnight() {
-        this.quest = new RescueDamselQuest();  //与RescueDamselQuest紧耦合
+        //与RescueDamselQuest紧耦合
+        this.quest = new RescueDamselQuest();
     }
 
     @Override

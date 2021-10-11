@@ -11,10 +11,14 @@ import org.zhouyu.spring.p1.l12.Employee;
  * 员工服务(原生JDBC实现)
  */
 @Service
-public class EmployeeJDBCTemplateService {
+public class EmployeeJdbcTemplateService {
+
+    private JdbcTemplate jdbcTemplate;
 
     @Autowired
-    private JdbcTemplate jdbcTemplate;
+    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
 
     public Employee getEmployeeById(long id) {
         return jdbcTemplate.queryForObject(
@@ -28,6 +32,8 @@ public class EmployeeJDBCTemplateService {
                     employee.setLastName(rs.getString("lastname"));
                     employee.setSalary(rs.getBigDecimal("salary"));
                     return employee;
-                }, id);  //指定查询参数
+                },
+                //指定查询参数
+                id);
     }
 }

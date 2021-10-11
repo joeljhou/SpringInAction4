@@ -15,10 +15,14 @@ import java.sql.SQLException;
  * 员工服务(原生JDBC实现)
  */
 @Service
-public class EmployeeJDBCNativeService {
+public class EmployeeJdbcNativeService {
+
+    private DataSource dataSource;
 
     @Autowired
-    private DataSource dataSource;
+    public void setDataSource(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
 
     public Employee getEmployeeById(long id) {
         Connection conn = null;
@@ -26,7 +30,8 @@ public class EmployeeJDBCNativeService {
         ResultSet rs = null;
         try {
             conn = dataSource.getConnection();
-            stmt = conn.prepareStatement("select id,name from employee where id = ?");  //查找员工
+            //查找员工
+            stmt = conn.prepareStatement("select id,name from employee where id = ?");
             stmt.setLong(1, id);
             rs = stmt.executeQuery();
             Employee employee = null;

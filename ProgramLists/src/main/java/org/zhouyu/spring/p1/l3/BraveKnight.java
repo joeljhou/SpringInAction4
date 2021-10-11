@@ -8,7 +8,10 @@ import org.zhouyu.spring.p1.l2.Knight;
  * 程序清单1.3 勇敢的骑士
  */
 public class BraveKnight implements Knight {
-    private Quest quest; //Quest接口
+    /**
+     * Quest接口
+     */
+    private Quest quest;
 
     public BraveKnight() {
     }

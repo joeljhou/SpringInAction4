@@ -16,8 +16,10 @@ public class KnightMain {
         //加载Sprinig应用上下文
         String path = new File("ProgramList").getCanonicalPath();
         FileSystemXmlApplicationContext context = new FileSystemXmlApplicationContext(path + "/src/main/java/com/zhouyu/spring/p1/p1_6/knights.xml");
-        Knight knight = context.getBean(Knight.class);    //获取knight bean
-        knight.embarkOnQuest();                           //使用knight
+        //获取knight bean
+        Knight knight = context.getBean(Knight.class);
+        //使用knight
+        knight.embarkOnQuest();
         context.close();
     }
 }

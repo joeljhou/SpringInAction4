@@ -11,19 +11,25 @@ public class Minstrel {
 
     private PrintStream stream;
 
-    //无参构造
+    /**
+     * 无参构造
+     */
     public Minstrel() {
     }
     public Minstrel(PrintStream stream) {
         this.stream = stream;
     }
 
-    //探险之前调用
+    /**
+     * 探险之前调用
+     */
     public void singBeforeQuest(){
         stream.println("啦啦啦，骑士好勇敢！");
     }
 
-    //探险之后调用
+    /**
+     * 探险之后调用
+     */
     public void singAfterQuest(){
         stream.println("嘻嘻，勇敢的骑士果然踏上了征程！");
     }

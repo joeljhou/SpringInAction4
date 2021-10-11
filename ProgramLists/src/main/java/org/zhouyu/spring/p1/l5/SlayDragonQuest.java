@@ -14,7 +14,9 @@ public class SlayDragonQuest implements Quest {
 
     private PrintStream stream;
 
-    //无参构造
+    /**
+     * 无参构造
+     */
     public SlayDragonQuest() {
     }
     public SlayDragonQuest(PrintStream stream) {

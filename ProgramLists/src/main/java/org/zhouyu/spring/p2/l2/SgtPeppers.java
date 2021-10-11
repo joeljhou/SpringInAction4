@@ -1,6 +1,5 @@
 package org.zhouyu.spring.p2.l2;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.zhouyu.spring.p2.l1.CompactDisc;
 
