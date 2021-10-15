@@ -18,7 +18,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.13.2</version>
+            <version>4.9</version>
         </dependency>
         <!--单元测试 mockito-->
         <dependency>
@@ -27,9 +27,9 @@
             <version>3.12.4</version>
         </dependency>
         <!--Spring-->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
+            <artifactId>spring-aop</artifactId>
             <version>5.3.8</version>
         </dependency>
         <dependency>
@@ -44,7 +44,23 @@
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
+            <artifactId>spring-core</artifactId>
+            <version>5.3.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-expression</artifactId>
+            <version>5.3.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.3.8</version>
+        </dependency>-->
+        <!--这个配置包含了上面所有Spring的配置依赖-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
             <version>5.3.8</version>
         </dependency>
         <dependency>
@@ -57,6 +73,12 @@
             <groupId>com.github.stefanbirkner</groupId>
             <artifactId>system-rules</artifactId>
             <version>1.19.0</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>junit-dep</artifactId>
+                    <groupId>junit</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!--工具 lombok-->
         <dependency>
@@ -68,6 +90,29 @@
             <groupId>org.sonatype.sisu</groupId>
             <artifactId>sisu-inject-bean</artifactId>
             <version>1.4.2</version>
+        </dependency>
+        <!--数据库dbcp-->
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-pool</groupId>
+            <artifactId>commons-pool</artifactId>
+            <version>1.5.4</version>
+        </dependency>
+        <!--数据库h2-->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.200</version>
+        </dependency>
+        <!--数据库jdbc-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.3.8</version>
         </dependency>
     </dependencies>
 </project>
